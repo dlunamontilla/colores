@@ -129,4 +129,28 @@ pre, code {
   text-decoration: underline;
 }
 
+.colores {
+  --diametro: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, var(--diametro));
+  grid-auto-rows: var(--diametro);
+  justify-content: center;
+  gap: 15px;
+  transition: 300ms ease;
+  background-color: rgba(0, 128, 212, 0.05);
+}
+.colores__item {
+  background-color: #6ec6ff;
+  border-radius: calc(var(--diametro) / 2 );
+  box-shadow: 0 0 3px 0px white, inset 0 0 5px 0px rgba(0, 0, 0, 0.6);
+  transition: 300ms ease;
+}
+.colores__item:hover {
+  background-color: #008000;
+}
+.colores__item:active {
+  transform: scale(0.98);
+  transition: none;
+}
+
 /*# sourceMappingURL=style.css.map */

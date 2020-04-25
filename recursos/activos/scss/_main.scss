@@ -1,0 +1,29 @@
+.colores {
+  --diametro: 50px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, var(--diametro));
+  grid-auto-rows: var(--diametro);
+  justify-content: center;
+  gap: 15px;
+  transition: 300ms ease;
+  background-color: rgba( $color-base, 0.05 );
+
+  &__item {
+    background-color: lighten( $color-base, 30 );
+    border-radius: calc(var(--diametro) / 2 );
+    box-shadow: 
+    0 0 3px 0px white,
+    inset 0 0 5px 0px rgba( black, 0.6 );
+    transition: 300ms ease;
+
+    &:hover {
+      background-color: #008000;
+    }
+
+    &:active {
+      transform: scale(0.98);
+      transition: none;
+    }
+  }
+}
